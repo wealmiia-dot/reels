@@ -1,0 +1,105 @@
+<!doctype html>
+<ul class="mt-3 text-sm text-slate-600">
+<li>Entrega acelerada</li>
+<li>Sistema de Ads</li>
+<li>Soporte premium</li>
+</ul>
+<a class="mt-4 inline-block px-4 py-2 rounded bg-indigo-600 text-white" href="#contact">Contratar</a>
+</div>
+</div>
+</section>
+
+
+<!-- AUTOMATIC DEMO FORM -->
+<section id="demo" class="mt-12 bg-slate-50 p-6 rounded">
+<h3 class="text-2xl font-bold mb-4">Prueba gratuita — 10 Reels de demostración</h3>
+<p class="text-slate-600 mb-4">Rellena los datos y nuestro sistema generará 10 Reels de muestra usando la web de tu negocio.</p>
+
+
+<form id="demoForm" class="grid md:grid-cols-2 gap-4">
+<input name="business_name" placeholder="Nombre del negocio" required class="p-3 rounded border" />
+<input name="email" placeholder="Email" type="email" required class="p-3 rounded border" />
+<input name="website" placeholder="URL de la web (p.ej. https://miweb.com)" required class="p-3 rounded border col-span-2" />
+<select name="industry" class="p-3 rounded border">
+<option value="coaches">Coaches</option>
+<option value="fitness">Fitness</option>
+<option value="restaurants">Restaurants</option>
+<option value="ecommerce">E-commerce</option>
+</select>
+
+
+<div class="col-span-2 flex gap-3">
+<button type="submit" class="px-5 py-3 rounded bg-indigo-600 text-white">Enviar y generar demo</button>
+<button type="button" id="demoPreviewBtn" class="px-5 py-3 rounded border">Ver ejemplo</button>
+</div>
+
+
+<p id="demoStatus" class="text-sm text-slate-500 col-span-2">Status: inactivo</p>
+</form>
+
+
+</section>
+
+
+<!-- CONTACT / FOOTER -->
+<section id="contact" class="mt-12">
+<h3 class="text-2xl font-bold mb-4">Contacto</h3>
+<p class="text-slate-600 mb-4">¿Listo para empezar? Rellena el formulario de demo o escribe a <a href="mailto:hi@wealmi.com" class="text-indigo-600">hi@wealmi.com</a>.</p>
+
+
+<footer class="mt-8 border-t pt-6 text-sm text-slate-500">
+<div class="flex items-center justify-between">
+<div>© Wealmi — Agencia de Reels IA</div>
+<div>Política de privacidad · Términos</div>
+</div>
+</footer>
+</section>
+</main>
+
+
+<script>
+// PLACEHOLDERS: replace with your real endpoints
+const GAS_WEBHOOK_URL = 'REPLACE_WITH_GAS_WEBAPP_URL';
+const DASHBOARD_URL = 'REPLACE_WITH_DASHBOARD_URL';
+const STRIPE_CHECKOUT_URL = 'REPLACE_WITH_STRIPE_CHECKOUT_URL';
+
+
+const form = document.getElementById('demoForm');
+const status = document.getElementById('demoStatus');
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+const data = Object.fromEntries(new FormData(form));
+status.textContent = 'Enviando...';
+try {
+// Safety: do not expose secret keys here. This endpoint should be a public webhook created in GAS
+const res = await fetch(GAS_WEBHOOK_URL, {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ action: 'create_demo', payload: data })
+});
+if (!res.ok) throw new Error('Error del servidor');
+const json = await res.json();
+status.textContent = 'Demo programada. Revisa tu email en 10-30 min.';
+// Optionally redirect to a 'thank you' page or dashboard
+} catch (err) {
+console.error(err);
+status.textContent = 'Error al enviar. Comprueba la consola.';
+}
+});
+
+
+document.getElementById('demoPreviewBtn').addEventListener('click', () => {
+// Simple demo preview modal (light)
+alert('Ejemplo: Reel de 10s con hook, valor y CTA. (Demo local)');
+});
+
+
+// CTA: redirect to Stripe or Dashboard
+document.querySelectorAll('a[href="#contact"]').forEach(a => a.addEventListener('click', (e)=>{
+// Scroll to contact
+e.preventDefault();
+document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}));
+</script>
+</body>
+</html>
