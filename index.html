@@ -1,105 +1,225 @@
 <!doctype html>
-<ul class="mt-3 text-sm text-slate-600">
-<li>Entrega acelerada</li>
-<li>Sistema de Ads</li>
-<li>Soporte premium</li>
-</ul>
-<a class="mt-4 inline-block px-4 py-2 rounded bg-indigo-600 text-white" href="#contact">Contratar</a>
-</div>
-</div>
-</section>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wealmi — Agencia de Reels IA Automática</title>
+  <meta name="description" content="100 Reels IA al mes. Totalmente automático, autónomo y gratis de operar. Prueba gratis: 10 Reels de demostración.">
+  <link rel="icon" href="/assets/favicon.ico" />
+  <!-- Tailwind Play CDN (rápido para prototipo). Para producción compilar Tailwind. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Pequeños ajustes visuales */
+    .gradient { background: linear-gradient(90deg,#7c3aed,#06b6d4); }
+  </style>
+</head>
+<body class="antialiased text-slate-900">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="/assets/logo.svg" alt="Wealmi" class="h-10 w-10" />
+        <div>
+          <h1 class="text-lg font-bold">Wealmi</h1>
+          <p class="text-xs text-slate-500">Agencia de Reels IA — Automático & Autónomo</p>
+        </div>
+      </div>
+      <nav class="flex items-center gap-4">
+        <a href="#how" class="text-sm hover:underline">Cómo funciona</a>
+        <a href="#plans" class="text-sm hover:underline">Planes</a>
+        <a href="#demo" class="text-sm hover:underline">Demo</a>
+        <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-md gradient text-white text-sm">Prueba 10 Reels Gratis</a>
+      </nav>
+    </div>
+  </header>
 
+  <!-- HERO -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-4xl font-extrabold mb-4">100 Reels IA al mes — Automático</h2>
+        <p class="text-lg text-slate-600 mb-6">Generación, edición y publicación automática de Reels, TikToks y Shorts — sin grabaciones, sin equipo y sin costes operativos. Empieza con <strong>10 Reels de prueba gratis</strong>.</p>
 
-<!-- AUTOMATIC DEMO FORM -->
-<section id="demo" class="mt-12 bg-slate-50 p-6 rounded">
-<h3 class="text-2xl font-bold mb-4">Prueba gratuita — 10 Reels de demostración</h3>
-<p class="text-slate-600 mb-4">Rellena los datos y nuestro sistema generará 10 Reels de muestra usando la web de tu negocio.</p>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+          <li class="p-3 bg-slate-50 rounded">🎬 100 vídeos/mes</li>
+          <li class="p-3 bg-slate-50 rounded">⚡ Automatización completa (GAS)</li>
+          <li class="p-3 bg-slate-50 rounded">🔁 Suscripciones recurrentes</li>
+          <li class="p-3 bg-slate-50 rounded">📊 Dashboard & Contabilidad</li>
+        </ul>
 
+        <div class="flex gap-3">
+          <a id="ctaTrial" class="inline-flex items-center px-5 py-3 rounded-md bg-indigo-600 text-white font-medium" href="#contact">Quiero 10 Reels Gratis</a>
+          <a class="inline-flex items-center px-5 py-3 rounded-md border" href="#plans">Ver planes</a>
+        </div>
+      </div>
 
-<form id="demoForm" class="grid md:grid-cols-2 gap-4">
-<input name="business_name" placeholder="Nombre del negocio" required class="p-3 rounded border" />
-<input name="email" placeholder="Email" type="email" required class="p-3 rounded border" />
-<input name="website" placeholder="URL de la web (p.ej. https://miweb.com)" required class="p-3 rounded border col-span-2" />
-<select name="industry" class="p-3 rounded border">
-<option value="coaches">Coaches</option>
-<option value="fitness">Fitness</option>
-<option value="restaurants">Restaurants</option>
-<option value="ecommerce">E-commerce</option>
-</select>
+      <div class="rounded-lg overflow-hidden border">
+        <!-- DEMO VIDEO or IMAGE -->
+        <video src="/assets/demo.mp4" autoplay muted loop playsinline class="w-full h-full object-cover"></video>
+      </div>
+    </section>
 
+    <!-- HOW IT WORKS -->
+    <section id="how" class="mt-16">
+      <h3 class="text-2xl font-bold mb-6">Cómo funciona (100% automático)</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded shadow-sm">
+          <h4 class="font-semibold">1. Te registras</h4>
+          <p class="text-sm text-slate-600 mt-2">Dejas tu web o negocio y el plan. Sistema crea tu espacio automáticamente.</p>
+        </div>
+        <div class="p-6 bg-white rounded shadow-sm">
+          <h4 class="font-semibold">2. Generamos guiones</h4>
+          <p class="text-sm text-slate-600 mt-2">IA extrae textos, genera hooks y guiones optimizados para Reels.</p>
+        </div>
+        <div class="p-6 bg-white rounded shadow-sm">
+          <h4 class="font-semibold">3. Producción y publicación</h4>
+          <p class="text-sm text-slate-600 mt-2">Clips IA, subtítulos, branding y publicación programada.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="col-span-2 flex gap-3">
-<button type="submit" class="px-5 py-3 rounded bg-indigo-600 text-white">Enviar y generar demo</button>
-<button type="button" id="demoPreviewBtn" class="px-5 py-3 rounded border">Ver ejemplo</button>
-</div>
+    <!-- FEATURES & NICHE -->
+    <section class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="p-6 bg-white rounded shadow-sm">
+        <h4 class="text-xl font-bold mb-3">Para quién funciona</h4>
+        <ul class="list-disc pl-5 text-slate-600">
+          <li>Coaches y consultores</li>
+          <li>Fitness y gimnasios</li>
+          <li>Restaurantes y locales</li>
+          <li>E-commerce y marcas</li>
+        </ul>
+      </div>
 
+      <div class="p-6 bg-white rounded shadow-sm">
+        <h4 class="text-xl font-bold mb-3">Qué entregamos</h4>
+        <ul class="list-disc pl-5 text-slate-600">
+          <li>Vídeos brandizados listos para publicar</li>
+          <li>Subtítulos automáticos</li>
+          <li>Thumbnail optimizado</li>
+          <li>Informe mensual y contabilidad</li>
+        </ul>
+      </div>
+    </section>
 
-<p id="demoStatus" class="text-sm text-slate-500 col-span-2">Status: inactivo</p>
-</form>
+    <!-- PLANS -->
+    <section id="plans" class="mt-12">
+      <h3 class="text-2xl font-bold mb-6">Planes</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded border">
+          <h4 class="font-bold text-lg">Starter</h4>
+          <p class="text-slate-600 mt-2">200€/mes — 30 Reels</p>
+          <ul class="mt-3 text-sm text-slate-600">
+            <li>Generación automática</li>
+            <li>Entrega en Drive</li>
+            <li>Dashboard básico</li>
+          </ul>
+          <a class="mt-4 inline-block px-4 py-2 rounded bg-indigo-600 text-white" href="#contact">Contratar</a>
+        </div>
 
+        <div class="p-6 rounded border shadow-lg transform scale-102">
+          <h4 class="font-bold text-lg">Pro</h4>
+          <p class="text-slate-600 mt-2">500€/mes — 60 Reels</p>
+          <ul class="mt-3 text-sm text-slate-600">
+            <li>Automatización prioritaria</li>
+            <li>Publicación automática</li>
+            <li>Dashboard completo</li>
+          </ul>
+          <a class="mt-4 inline-block px-4 py-2 rounded bg-indigo-600 text-white" href="#contact">Contratar</a>
+        </div>
 
-</section>
+        <div class="p-6 rounded border">
+          <h4 class="font-bold text-lg">Ultra</h4>
+          <p class="text-slate-600 mt-2">1000€/mes — 100 Reels</p>
+          <ul class="mt-3 text-sm text-slate-600">
+            <li>Entrega acelerada</li>
+            <li>Sistema de Ads</li>
+            <li>Soporte premium</li>
+          </ul>
+          <a class="mt-4 inline-block px-4 py-2 rounded bg-indigo-600 text-white" href="#contact">Contratar</a>
+        </div>
+      </div>
+    </section>
 
+    <!-- AUTOMATIC DEMO FORM -->
+    <section id="demo" class="mt-12 bg-slate-50 p-6 rounded">
+      <h3 class="text-2xl font-bold mb-4">Prueba gratuita — 10 Reels de demostración</h3>
+      <p class="text-slate-600 mb-4">Rellena los datos y nuestro sistema generará 10 Reels de muestra usando la web de tu negocio.</p>
 
-<!-- CONTACT / FOOTER -->
-<section id="contact" class="mt-12">
-<h3 class="text-2xl font-bold mb-4">Contacto</h3>
-<p class="text-slate-600 mb-4">¿Listo para empezar? Rellena el formulario de demo o escribe a <a href="mailto:hi@wealmi.com" class="text-indigo-600">hi@wealmi.com</a>.</p>
+      <form id="demoForm" class="grid md:grid-cols-2 gap-4">
+        <input name="business_name" placeholder="Nombre del negocio" required class="p-3 rounded border" />
+        <input name="email" placeholder="Email" type="email" required class="p-3 rounded border" />
+        <input name="website" placeholder="URL de la web (p.ej. https://miweb.com)" required class="p-3 rounded border col-span-2" />
+        <select name="industry" class="p-3 rounded border">
+          <option value="coaches">Coaches</option>
+          <option value="fitness">Fitness</option>
+          <option value="restaurants">Restaurants</option>
+          <option value="ecommerce">E-commerce</option>
+        </select>
 
+        <div class="col-span-2 flex gap-3">
+          <button type="submit" class="px-5 py-3 rounded bg-indigo-600 text-white">Enviar y generar demo</button>
+          <button type="button" id="demoPreviewBtn" class="px-5 py-3 rounded border">Ver ejemplo</button>
+        </div>
 
-<footer class="mt-8 border-t pt-6 text-sm text-slate-500">
-<div class="flex items-center justify-between">
-<div>© Wealmi — Agencia de Reels IA</div>
-<div>Política de privacidad · Términos</div>
-</div>
-</footer>
-</section>
-</main>
+        <p id="demoStatus" class="text-sm text-slate-500 col-span-2">Status: inactivo</p>
+      </form>
 
+    </section>
 
-<script>
-// PLACEHOLDERS: replace with your real endpoints
-const GAS_WEBHOOK_URL = 'REPLACE_WITH_GAS_WEBAPP_URL';
-const DASHBOARD_URL = 'REPLACE_WITH_DASHBOARD_URL';
-const STRIPE_CHECKOUT_URL = 'REPLACE_WITH_STRIPE_CHECKOUT_URL';
+    <!-- CONTACT / FOOTER -->
+    <section id="contact" class="mt-12">
+      <h3 class="text-2xl font-bold mb-4">Contacto</h3>
+      <p class="text-slate-600 mb-4">¿Listo para empezar? Rellena el formulario de demo o escribe a <a href="mailto:hi@wealmi.com" class="text-indigo-600">hi@wealmi.com</a>.</p>
 
+      <footer class="mt-8 border-t pt-6 text-sm text-slate-500">
+        <div class="flex items-center justify-between">
+          <div>© Wealmi — Agencia de Reels IA</div>
+          <div>Política de privacidad · Términos</div>
+        </div>
+      </footer>
+    </section>
+  </main>
 
-const form = document.getElementById('demoForm');
-const status = document.getElementById('demoStatus');
-form.addEventListener('submit', async (e) => {
-e.preventDefault();
-const data = Object.fromEntries(new FormData(form));
-status.textContent = 'Enviando...';
-try {
-// Safety: do not expose secret keys here. This endpoint should be a public webhook created in GAS
-const res = await fetch(GAS_WEBHOOK_URL, {
-method: 'POST',
-headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ action: 'create_demo', payload: data })
-});
-if (!res.ok) throw new Error('Error del servidor');
-const json = await res.json();
-status.textContent = 'Demo programada. Revisa tu email en 10-30 min.';
-// Optionally redirect to a 'thank you' page or dashboard
-} catch (err) {
-console.error(err);
-status.textContent = 'Error al enviar. Comprueba la consola.';
-}
-});
+  <script>
+    // PLACEHOLDERS: replace with your real endpoints
+    const GAS_WEBHOOK_URL = 'REPLACE_WITH_GAS_WEBAPP_URL';
+    const DASHBOARD_URL = 'REPLACE_WITH_DASHBOARD_URL';
+    const STRIPE_CHECKOUT_URL = 'REPLACE_WITH_STRIPE_CHECKOUT_URL';
 
+    const form = document.getElementById('demoForm');
+    const status = document.getElementById('demoStatus');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      status.textContent = 'Enviando...';
+      try {
+        // Safety: do not expose secret keys here. This endpoint should be a public webhook created in GAS
+        const res = await fetch(GAS_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'create_demo', payload: data })
+        });
+        if (!res.ok) throw new Error('Error del servidor');
+        const json = await res.json();
+        status.textContent = 'Demo programada. Revisa tu email en 10-30 min.';
+        // Optionally redirect to a 'thank you' page or dashboard
+      } catch (err) {
+        console.error(err);
+        status.textContent = 'Error al enviar. Comprueba la consola.';
+      }
+    });
 
-document.getElementById('demoPreviewBtn').addEventListener('click', () => {
-// Simple demo preview modal (light)
-alert('Ejemplo: Reel de 10s con hook, valor y CTA. (Demo local)');
-});
+    document.getElementById('demoPreviewBtn').addEventListener('click', () => {
+      // Simple demo preview modal (light)
+      alert('Ejemplo: Reel de 10s con hook, valor y CTA. (Demo local)');
+    });
 
-
-// CTA: redirect to Stripe or Dashboard
-document.querySelectorAll('a[href="#contact"]').forEach(a => a.addEventListener('click', (e)=>{
-// Scroll to contact
-e.preventDefault();
-document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-}));
-</script>
+    // CTA: redirect to Stripe or Dashboard
+    document.querySelectorAll('a[href="#contact"]').forEach(a => a.addEventListener('click', (e)=>{
+      // Scroll to contact
+      e.preventDefault();
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }));
+  </script>
 </body>
 </html>
